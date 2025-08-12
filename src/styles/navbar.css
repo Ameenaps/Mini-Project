@@ -1,0 +1,242 @@
+:root {
+  --text: #141414;
+  --bg: #fafafa;
+  --muted-border: #ededed;
+  --button-gray: #ededed;
+  --white-ish: #fafafa;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(to left, rgb(229, 220, 220), rgb(62, 62, 62));
+  color: var(--text);
+  font-family: Lexend, "Noto Sans", sans-serif;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--muted-border);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Ensure consistent padding */
+  border-radius: 9999px;
+  transition: background 0.2s, color 0.2s, transform 0.1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem; /* Set a fixed height to prevent layout shifts */
+}
+
+.nav-link:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primary {
+  background: #000;
+  color: var(--white-ish);
+}
+
+.btn-primary:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: var(--button-gray);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #d4d4d4;
+  transform: scale(1.05);
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping that could hide links */
+  min-width: 0; /* Allow flex children to shrink */
+  overflow-x: auto; /* Enable horizontal scroll if needed */
+}
+
+/* Optional: Always show scrollbar for navbar-links if overflowing */
+.navbar-links::-webkit-scrollbar {
+  height: 4px;
+  background: #ccc;
+  border-radius: 2px;
+}
+
+.link {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background 0.2s, color 0.2s, transform 0.1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: none; /* Remove focus outline */
+}
+
+.link:hover {
+  background-color: black; /* Change background to black */
+  color: white; /* Ensure text color changes to white */
+  border-radius: 12px;
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.link:focus {
+  outline: none; /* Ensure no border is visible on focus */
+}
+
+.link:active {
+  transform: scale(0.95); /* Slightly shrink the button on click */
+  transition: transform 0.05s ease-in-out; /* Faster transition for click */
+}
+
+.navbar-nav {
+  gap: 2.5rem;
+  color: var(--text);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center; /* Ensure all nav items are vertically aligned */
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links {
+    gap: 0.5rem;
+    flex-wrap: nowrap; /* Prevent wrapping on small screens */
+    overflow-x: auto; /* Allow horizontal scroll */
+  }
+}
+
+.link:active {
+  transform: scale(0.95); /* Slightly shrink the button on click */
+  transition: transform 0.05s ease-in-out; /* Faster transition for click */
+}
+.navbar-nav {
+  gap: 2.5rem;
+  color: var(--text);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center; /* Ensure all nav items are vertically aligned */
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  line-height: 1.5; /* leading-normal */
+  transition: background 0.2s, color 0.2s, transform 0.1s ease-in-out;
+  padding: 0.5rem 1rem; /* Add padding for better click area */
+  border-radius: 9999px; /* Rounded effect like buttons */
+}
+
+.nav-link:hover {
+  background-color: black; /* Match the background effect */
+  color: white; /* Change text color to white */
+  transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+.nav-links a {
+  text-decoration: none; /* Ensure links inside buttons have no underline */
+  color: inherit; /* Inherit color from the button */
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links {
+    gap: 0.5rem;
+    flex-wrap: nowrap; /* Prevent wrapping on small screens */
+    overflow-x: auto; /* Allow horizontal scroll */
+  }
+}
+.nav-actions {
+  gap: 2.5rem;
+}
+
+/* Optional: Always show scrollbar for navbar-links if overflowing */
+.navbar-links::-webkit-scrollbar {
+  height: 4px;
+  background: #ccc;
+  border-radius: 2px;
+}
