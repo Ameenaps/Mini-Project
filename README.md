@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 
 # Smart_Park_System
-=======
-SmartPark: AI-Powered Parking Fee Management System
->>>>>>> d1856935b73f49d3825f49ef704670a5a93096d5
+
+
 
 In modern urban environments, the surge in vehicle usage has made efficient parking management a pressing necessity. This mini project proposes a smart web-based parking management system that automates the entire parking process from vehicle entry to exit. When a vehicle arrives at the parking facility, a camera captures and recognizes its number plate and determines the vehicle type. The system then logs the entry time, checks slot availability in real time, and either allocates a slot automatically or denies entry if full. This reduces manual dependency and optimizes space usage. All records are securely stored in a database, ensuring traceability and structured monitoring of parking activity.
 
